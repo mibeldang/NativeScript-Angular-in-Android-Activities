@@ -1,0 +1,8 @@
+/* Add mobile styles for the component here.  */
+.form{
+    margin-top: 390px!important;
+    background-color: lightblue;
+    color: black;
+    overflow: auto;
+    text-align: center;
+}

@@ -1,0 +1,29 @@
+<!-- <ActionBar title="Soccer Player"></ActionBar> -->
+<GridLayout style="background-image: url('https://i.pinimg.com/736x/6c/69/de/6c69dec1b225a88fe9eb5e4436811412.jpg');background-repeat: no-repeat;
+  background-position: center; background-size: cover; ">
+    <FlexboxLayout flexDirection="column">
+        <FlexboxLayout class="m-15">
+            <Label class="h3" [text]="item.id + '. '" color="black" fontWeight="bold" fontSize="25px"></Label>
+            <Label class="h3" [text]="item.name+ ': '" color="black" fontWeight="bold" fontSize="25px"></Label>
+            <Label class="h3" [text]="item.role" color="black" fontWeight="bold" fontSize="25px"></Label>
+            <Button text="Update" (tap)="update()" class="-primary -rounded-sm"></Button>
+        </FlexboxLayout>
+
+        <FlexboxLayout class="m-15">
+            <Label class="h4 m-15" [text]="" text="Goals Score" fontWeight="bold" color="black"></Label>
+            <Label class="h1 m-15" [text]="score" color="black" fontWeight="bold"></Label>
+        </FlexboxLayout>
+
+        <FlexboxLayout>
+            <Button *ngIf="score < 10" text="Increment Button" (tap)="onIncrease()" class="-primary -rounded-sm"></Button>
+            <Button *ngIf="score > 0" text="Decrement Button!" (tap)="onDecrease()" class="-primary -rounded-sm"></Button>
+        </FlexboxLayout>
+
+        <Image [src]="stitchDoraemon" loadMode="async" stretch="aspectFit"></Image>
+
+    </FlexboxLayout>
+    <GridLayout *ngIf="edit">
+        <ns-soccer-form (editItem)="toEdit($event)" [name]="item.name" [role]="item.role"></ns-soccer-form>
+    </GridLayout>
+
+</GridLayout>

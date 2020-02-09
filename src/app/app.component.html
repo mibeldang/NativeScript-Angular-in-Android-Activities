@@ -1,0 +1,6 @@
+<StackLayout style="background-image: url('https://i.pinimg.com/736x/6c/69/de/6c69dec1b225a88fe9eb5e4436811412.jpg');background-repeat: no-repeat;
+        background-position: center; background-size:cover; ">
+    <page-router-outlet></page-router-outlet>
+    <Button style="margin-top:250px" text="Soccer Player" (tap)="player()" class="-primary -rounded-lg"></Button>
+    <Button text="Artists" [nsRouterLink]="['/artists']" routerLinkActive="router-link-active" class="-primary -rounded-lg"></Button>
+</StackLayout>

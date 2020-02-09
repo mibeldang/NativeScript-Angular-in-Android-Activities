@@ -1,0 +1,14 @@
+<!-- <ActionBar title="Soccer Player"></ActionBar> -->
+<FlexboxLayout flexDirection="column">
+  <StackLayout class="form">
+    <Label text="Name: "></Label>
+    <StackLayout class="input-field">
+      <TextField class="input" color="black" ngModel [(ngModel)]="name"></TextField>
+    </StackLayout>
+    <Label text="Role: "></Label>
+    <StackLayout class="input-field">
+      <TextField class="input" color="black" ngModel [(ngModel)]="role"></TextField>
+    </StackLayout>
+    <Button text="Submit" (tap)="onSubmit()" class="-primary -rounded-lg"></Button>
+  </StackLayout>
+</FlexboxLayout>
